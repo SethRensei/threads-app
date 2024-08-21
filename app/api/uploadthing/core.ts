@@ -14,14 +14,14 @@ export const ourFileRouter = {
             const user = await getUser();
 
             // If you throw, the user will not be able to upload
-            if (!user) throw new Error("Unauthorized");
+            if (!user) throw new Error("Non autorisé");
 
             // Whatever is returned here is accessible in onUploadComplete as `metadata`
             return { userId: user.id };
         })
         .onUploadComplete(async ({ metadata, file }) => {
             // This code RUNS ON YOUR SERVER after upload
-            console.log("Upload complete for userId:", metadata.userId);
+            console.log("Téléchargement terminé pour l'ID utilisateur:", metadata.userId);
 
             console.log("file url", file.url);
         }),
