@@ -9,6 +9,11 @@ import ProfileHeader from "@/components/shared/ProfileHeader";
 import ThreadsTab from "@/components/shared/ThreadsTab";
 import { profileTabs } from "@/constants";
 
+export const metadata = {
+    title: "Threads | Mon Profil",
+    description: "Votre profil sur Threads avec tous vos posts.",
+};
+
 export default async function Page({ params }: { params: { id: string } }) {
     const user = await currentUser();
     if (!user) return null;

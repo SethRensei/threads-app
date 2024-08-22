@@ -8,6 +8,11 @@ import CommunityCard from "@/components/cards/CommunityCard";
 import { fetchUser } from "@/lib/actions/user.actions";
 import { fetchCommunities } from "@/lib/actions/community.actions";
 
+export const metadata = {
+    title: "Threads | Nos Communautés",
+    description: "Rejoignez des communautés pour plus d'inspirations et de contenu.",
+};
+
 export default async function Page({
     searchParams,
 }: {

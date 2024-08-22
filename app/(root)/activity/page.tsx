@@ -5,6 +5,11 @@ import { redirect } from "next/navigation";
 
 import { fetchUser, getActivity } from "@/lib/actions/user.actions";
 
+export const metadata = {
+    title: "Threads | Mes Activités",
+    description: "Regardez les activités liés à votre contenu posté.",
+};
+
 export default async function Page() {
     const user = await currentUser();
     if (!user) return null;

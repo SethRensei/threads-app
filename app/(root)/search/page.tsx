@@ -7,6 +7,11 @@ import Pagination from "@/components/shared/Pagination";
 import { fetchUser, fetchUsers } from "@/lib/actions/user.actions";
 import UserCard from "@/components/cards/UserCard";
 
+export const metadata = {
+    title: "Threads | Rechercher",
+    description: "Faites des recherches de communautés et d'autres créateurs de contenus.",
+};
+
 export default async function Page({
     searchParams,
 }: {

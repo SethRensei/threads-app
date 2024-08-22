@@ -4,6 +4,11 @@ import { redirect } from "next/navigation";
 import AccountProfile from "@/components/forms/AccountProfile";
 import { fetchUser } from "@/lib/actions/user.actions";
 
+export const metadata = {
+    title: "Threads | Intégration",
+    description: "Ajoutez plus d'informations sur vous pour profiter d'une meilleure expérience.",
+};
+
 export default async function Page() {
     const user = await currentUser();
 

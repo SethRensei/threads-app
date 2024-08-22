@@ -7,6 +7,11 @@ import { fetchUser } from "@/lib/actions/user.actions";
 import { fetchThreadById } from "@/lib/actions/thread.actions";
 import Comment from "@/components/forms/Comment";
 
+export const metadata = {
+    title: "Threads | Contenu - Fil",
+    description: "Explorez un contenu sur Thread.",
+};
+
 export const revalidate = 0;
 
 export default async function Page({ params }: { params: { id: string } }) {
